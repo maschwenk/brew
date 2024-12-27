@@ -162,7 +162,7 @@ class GitHubRunnerMatrix
                                 macos_version >= OLDEST_GITHUB_ACTIONS_ARM_MACOS_RUNNER
 
       runner, timeout = if use_github_runner && github_runner_available
-        ["macos-#{version}", GITHUB_ACTIONS_RUNNER_TIMEOUT]
+        ["depot-macos-#{version}", GITHUB_ACTIONS_RUNNER_TIMEOUT]
       elsif macos_version >= :monterey
         ["#{version}-arm64#{ephemeral_suffix}", runner_timeout]
       else
